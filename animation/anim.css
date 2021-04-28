@@ -1099,6 +1099,60 @@
 }
 /* SlideToLeft Background */
 
+/* Spinner */
+.animate-spin-ech:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid var(--yourColor);
+    border-top-color: #fff;
+    animation: spinner .6s linear infinite;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* Spinner */
+
+
+/* Spinner Button */ 
+.animate-spin-btn {
+    position: relative;
+}
+
+.animate-spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    border-top-color: #fff;
+    animation: spinner .6s linear infinite;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* Spinner Button */ 
+
+
+
 /* .animate-nofadeIn {
     animation: 0.3s nofadeIn;
     -webkit-animation: 0.3s nofadeIn;
@@ -1467,6 +1521,13 @@
         -moz-transition: clip-path .3s;
         -ms-transition: clip-path .3s;
         -o-transition: clip-path .3s;
+    }
+}
+
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
     }
 }
 
