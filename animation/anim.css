@@ -1124,11 +1124,11 @@
 
 
 /* Spinner Button */ 
-.animate-spin-btn {
+.animate-spin-isBtn {
     position: relative;
 }
 
-.animate-spinner:before {
+.animate-btn-spinner:before {
     content: '';
     box-sizing: border-box;
     position: absolute;
