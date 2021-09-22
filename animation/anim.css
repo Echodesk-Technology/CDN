@@ -685,7 +685,7 @@
     animation: 0.2s slideOutLeft;
     -webkit-animation: 0.2s slideOutLeft;
 }
-.animate-slideOutLeftt-03sec {
+.animate-slideOutLeft-03sec {
     animation: 0.3s slideOutLeft;
     -webkit-animation: 0.3s slideOutLeft;
 }
@@ -1085,6 +1085,103 @@
 
 /* HoveredText */
 
+/* SlideToLeft Background */
+.animate-slideInLeftBg {
+    cursor: pointer;
+    background-image: linear-gradient( to left, transparent, transparent 50%, #f3f4f6 50%, #f3f4f6);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all 0.25s ease-in;
+}
+
+.animate-slideInLeftBg:hover {
+    background-position: 0 0;
+}
+/* SlideToLeft Background */
+
+/* Spinner */
+.animate-spin-ech:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid var(--yourColor);
+    border-top-color: #fff;
+    animation: spinner .6s linear infinite;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* Spinner */
+
+
+/* Spinner Button */ 
+.animate-spin-isBtn {
+    position: relative;
+}
+
+.animate-btn-spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    border-top-color: #fff;
+    animation: spinner .6s linear infinite;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* Spinner Button */ 
+
+/* Top Line Progress Bar */
+.animate-topLineProgressBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.animate-lineProgressBar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: bar 1.8s ease infinite;
+}
+
+.animate-lineProgressBar::before, .bar::after {
+    position: absolute;
+    content: "";
+    width: 1%;
+    min-width: 0.5px;
+    height: 100%;
+    background-color: var(--primary);
+    animation: barr 1.8s ease infinite;
+    transform-origin: right;
+}
+/* Top Line Progress Bar */
+
+
 /* .animate-nofadeIn {
     animation: 0.3s nofadeIn;
     -webkit-animation: 0.3s nofadeIn;
@@ -1453,6 +1550,35 @@
         -moz-transition: clip-path .3s;
         -ms-transition: clip-path .3s;
         -o-transition: clip-path .3s;
+    }
+}
+
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes barr {
+    0% {
+        transform: scaleX(5) translateX(-100%);
+    }
+    40% {
+        transform: scaleX(33) translateX(-50%);
+    }
+    100% {
+        transform: scaleX(0) translateX(-50%);
+    }
+}
+
+@keyframes bar {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
     }
 }
 
